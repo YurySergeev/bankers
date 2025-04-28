@@ -1,5 +1,3 @@
-// bankers.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
 
 #include <iostream>
 #include <fstream>
@@ -9,7 +7,7 @@
 int main()
 {
     //
-    // READING/INITIALIZING
+    // READING/INITIALIZE 
     //
     std::ifstream inputFile("input.txt");
     if (!inputFile) {
@@ -27,7 +25,7 @@ int main()
     inputFile >> numProcesses >> numResources;
     std::cout << "Number of Processes: " << numProcesses << " | Number of Resources: " << numResources << std::endl;
 
-    //skip line
+    //finish + skip line
     inputFile.ignore(100, '\n');
     inputFile.ignore(100, '\n');
     //
@@ -58,7 +56,7 @@ int main()
     }
 
 
-    //skip line
+    //finish + skip line
     inputFile.ignore(100, '\n');
     inputFile.ignore(100, '\n');
     //
@@ -88,7 +86,7 @@ int main()
     }
 
 
-    //skip line
+    //finish + skip line
     inputFile.ignore(100, '\n');
     inputFile.ignore(100, '\n');
     //
@@ -114,7 +112,7 @@ int main()
     std::cout << "-------------------------------------" << std::endl;
 
 
-    //Make and solve the whole need matrix
+    //Initialize the need matrix
     std::vector<std::vector<int>> need(numProcesses, std::vector<int>(numResources));
 
     for (int i = 0; i < numProcesses; ++i) {
@@ -204,7 +202,7 @@ int main()
 
     if (isSafe) {
 
-        std::cout << "System is in a SAFE state!" << std::endl;
+        std::cout << "System is SAFE." << std::endl;
         std::cout << "Safe sequence: ";
 
         for (int i = 0; i < safeSequence.size(); ++i) {
@@ -219,7 +217,7 @@ int main()
     }
     else {
 
-        std::cout << "System is in an UNSAFE state!" << std::endl;
+        std::cout << "System is UNSAFE." << std::endl;
 
     }
 
