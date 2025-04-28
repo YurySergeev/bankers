@@ -18,5 +18,27 @@ g++ banker.cpp -o banker
 
 The program is designed to handle n processes and m resource types
 
-By keeping the same format, you can add as many processes and resources into input.txt 
+input.txt can be edited to the desired system size based on resources and process at hand as long as the input format remains consistent with the provided input.txt.
+```
+
+# Number of processes | number of resources  |   # Number of processes | number of resources
+5 3                                          |   6 4
+# Allocation matrix                          |   # Allocation matrix
+0 1 0                                        |   0 2 5 1
+2 0 0                                        |   1 2 5 8
+3 0 2                                        |   1 4 5 2
+2 1 1                                        |   4 7 8 1
+0 0 2                                        |   1 4 5 2
+# Max matrix                                 |   5 2 4 9
+7 5 3                                        |   # Max matrix
+3 2 2                                        |   7 8 9 6
+9 0 2                                        |   4 2 5 8
+2 2 2                                        |   7 4 1 2
+4 3 3                                        |   6 2 5 8
+# Available resources                        |   1 2 5 8
+3 3 2                                        |   4 5 6 8
+                                             |   # Available resources
+                                             |   0 3 6 1
+
+```
 
